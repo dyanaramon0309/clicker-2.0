@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+     <style>
+        .botonGalleta {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 80px; 
+            height: 80px;
+            border: none;
+            cursor: pointer;
+            background-image: url("https://d1zc67o3u1epb0.cloudfront.net/media/catalog/product/c/h/chokis_1000x1000_190-p_2.jpg?width=700&height=700&store=mayorista&image-type=image");
+            background-size: cover;
+            transition: transform 0.1s;
+        }
+        .botonComida:active {
+            transform: scale(0.9);
+        }
+    <style>
     <meta charset="UTF-8">
     <title>Mi Sitio en GitHub</title>
 </head>
 <body>
     <h1 id="titulo">Hola, GitHub</h1>
-    <button onclick="cambiarTexto()">Haz clic aquí</button>
+    <button onclick="cambiarTexto()" class = "botonGalleta">Haz clic aquí</button>
 
     <!-- Enlace al archivo de JavaScript -->
     <script src="script.js"></script>

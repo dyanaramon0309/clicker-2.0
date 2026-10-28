@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clicker de pan</title>
-
+    <style>
+        #menuLateral.active {
+            left: 0 !important;
+        }
+    </style>
     <style>
         body {
             background-color: #D2B48C;
@@ -33,6 +37,12 @@
 </head>
 
 <body>
+        <button type="button" id="toggleMenu" style="position: absolute; top: 20px; left: 20px; font-size: 20px; padding: 10px 15px; background-color: #8B4513; color: white; border: none; cursor: pointer; border-radius: 5px; z-index: 10;">☰ Menú</button>
+
+    <div id="menuLateral" style="position: fixed; top: 0; left: -250px; width: 250px; height: 100%; background-color: #5C4033; color: white; transition: left 0.3s ease; box-shadow: 2px 0px 10px rgba(0,0,0,0.5); z-index: 9; padding-top: 80px; font-family: Arial, sans-serif;">
+        <a href="#" style="padding: 15px 25px; text-decoration: none; font-size: 18px; color: #E6D7C3; display: block;">🍞 Mejoras</a>
+        <a href="#" style="padding: 15px 25px; text-decoration: none; font-size: 18px; color: #E6D7C3; display: block;">🛒 Tienda</a>
+    </div>
     <h1 id="titulo">Dale click</h1>
 
    <button type="button" class="botonGalleta"></button>

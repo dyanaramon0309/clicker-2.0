@@ -2,5 +2,6 @@
 
 function clickContador() {
     contador++;
+ 
     document.getElementById("contador").innerText = contador;
 }

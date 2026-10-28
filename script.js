@@ -1,16 +1,14 @@
-
 let contador = 0;
-const botonMenu = document.getElementById("toggleMenu");
-const menuLateral = document.getElementById("menuLateral");
+let multiplicador = 1;
 
-    if (botonMenu && menuLateral) {
-        botonMenu.addEventListener("click", function () {
-            menuLateral.classList.toggle("active");
-        });
-    
 document.addEventListener("DOMContentLoaded", function () {
     const boton = document.querySelector(".botonGalleta");
     const textoContador = document.getElementById("contador");
+    
+    const botonMenu = document.getElementById("toggleMenu");
+    const menuLateral = document.getElementById("menuLateral");
+    const btnMejora1 = document.getElementById("btnMejora1");
+    const btnMejora2 = document.getElementById("btnMejora2");
 
     if (!boton || !textoContador) {
         console.error("No se encontró el botón o el contador.");
@@ -18,9 +16,27 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     boton.addEventListener("click", function () {
-        contador++;
+        contador += multiplicador;
         textoContador.textContent = contador;
-        console.log("Click registrado:", contador);
     });
-});
 
+    if (botonMenu && menuLateral) {
+        botonMenu.addEventListener("click", function () {
+            menuLateral.classList.toggle("active");
+        });
+    }
+
+    if (btnMejora1) {
+        btnMejora1.addEventListener("click", function () {
+            multiplicador = 2;
+            console.log("Multiplicador cambiado a 2");
+        });
+    }
+
+    if (btnMejora2) {
+        btnMejora2.addEventListener("click", function () {
+            multiplicador = 3;
+            console.log("Multiplicador cambiado a 3");
+        });
+    }
+});

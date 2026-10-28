@@ -1,7 +1,7 @@
  let contador = 0;
 
-function clickContador() {
-    contador++;
- 
-    document.getElementById("contador").innerText = contador;
-}
+        document.getElementById("botonPan").addEventListener("click", function() {
+            contador++;
+            document.getElementById("contador").textContent = contador;
+            console.log("Click registrado:", contador);
+        });

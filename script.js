@@ -1,6 +1,13 @@
 
 let contador = 0;
+const botonMenu = document.getElementById("toggleMenu");
+const menuLateral = document.getElementById("menuLateral");
 
+    if (botonMenu && menuLateral) {
+        botonMenu.addEventListener("click", function () {
+            menuLateral.classList.toggle("active");
+        });
+    
 document.addEventListener("DOMContentLoaded", function () {
     const boton = document.querySelector(".botonGalleta");
     const textoContador = document.getElementById("contador");

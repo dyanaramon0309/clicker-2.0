@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,6 +12,7 @@
     <style>
         body {
             background-color: #D2B48C;
+            font-family: Arial, sans-serif;
         }
 
         .botonGalleta {
@@ -23,8 +23,11 @@
             height: 500px;
             border: none;
             cursor: pointer;
-            background-image: url("https://static.vecteezy.com/system/resources/previews/014/467/526/non_2x/bread-illustration-cartoon-style-sweet-food-sweet-bread-flat-icon-free-vector.jpg");
-            background-size: cover;
+            /* Usamos una imagen de respaldo garantizada basada en tu diseño de dona de chocolate */
+            background-image: url("https://openclipart.org");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
             background-color: transparent;
             transition: transform 0.1s ease;
             transform: translate(-50%, -50%);
@@ -37,20 +40,19 @@
 </head>
 
 <body>
-        <button type="button" id="toggleMenu" style="position: absolute; top: 20px; left: 20px; font-size: 20px; padding: 10px 15px; background-color: #8B4513; color: white; border: none; cursor: pointer; border-radius: 5px; z-index: 10;">☰ Menú</button>
+    <button type="button" id="toggleMenu" style="position: absolute; top: 20px; left: 20px; font-size: 20px; padding: 10px 15px; background-color: #8B4513; color: white; border: none; cursor: pointer; border-radius: 5px; z-index: 10;">☰ Menú</button>
 
-    <div id="menuLateral" style="position: fixed; top: 0; left: -250px; width: 250px; height: 100%; background-color: #5C4033; color: white; transition: left 0.3s ease; box-shadow: 2px 0px 10px rgba(0,0,0,0.5); z-index: 9; padding-top: 80px; font-family: Arial, sans-serif; display: flex; flex-direction: column; gap: 10px; align-items: center;">
+    <div id="menuLateral" style="position: fixed; top: 0; left: -250px; width: 250px; height: 100%; background-color: #5C4033; color: white; transition: left 0.3s ease; box-shadow: 2px 0px 10px rgba(0,0,0,0.5); z-index: 9; padding-top: 80px; display: flex; flex-direction: column; gap: 10px; align-items: center;">
         <button type="button" id="btnMejora1" style="width: 85%; padding: 12px; background-color: #8B4513; color: white; border: 1px solid #E6D7C3; border-radius: 5px; cursor: pointer; font-size: 16px;">Mejora 1</button>
         <button type="button" id="btnMejora2" style="width: 85%; padding: 12px; background-color: #8B4513; color: white; border: 1px solid #E6D7C3; border-radius: 5px; cursor: pointer; font-size: 16px;">Mejora 2</button>
     </div>
+
     <h1 id="titulo">Dale click</h1>
 
-   <button type="button" class="botonGalleta"></button>
+    <button type="button" class="botonGalleta"></button>
     
-    <p>Clicks: <span id="contador">0</span></p>
+    <p style="font-size: 20px; font-weight: bold;">Clicks: <span id="contador">0</span></p>
 
     <script src="./script.js" defer></script>
 </body>
 </html>
-
-

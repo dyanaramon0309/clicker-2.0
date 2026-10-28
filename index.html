@@ -1,39 +1,46 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-     <style>
-          body {
-                  backround-color: #D2B48C;
-          }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker de pan</title>
+
+    <style>
+        body {
+            background-color: #D2B48C;
+        }
+
         .botonGalleta {
-            position:absolute;
+            position: absolute;
             top: 50%;
             left: 50%;
-            width: 500px; 
+            width: 500px;
             height: 500px;
             border: none;
             cursor: pointer;
             background-image: url("https://static.vecteezy.com/system/resources/previews/014/467/526/non_2x/bread-illustration-cartoon-style-sweet-food-sweet-bread-flat-icon-free-vector.jpg");
             background-size: cover;
-             background-color: transparent;
+            background-color: transparent;
             transition: transform 0.1s ease;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
         }
+
         .botonGalleta:active {
-            transform: translate(-50%,-50%) scale(0.9);
+            transform: translate(-50%, -50%) scale(0.9);
         }
-     </style>
-    <meta charset="UTF-8">
-    <title>Clicker de pan</title>
+    </style>
 </head>
+
 <body>
     <h1 id="titulo">Dale click</h1>
-    <button onclick="click()" class = "botonGalleta"></button>
 
-     <p>Clicks: <span id="contador">0</span></p>
+    <button onclick="clickContador()" class="botonGalleta"></button>
 
-    <!-- Enlace al archivo de JavaScript -->
+    <p>Clicks: <span id="contador">0</span></p>
+
     <script src="script.js"></script>
 </body>
 </html>
+
 

@@ -1,10 +1,6 @@
- 
-let contador = 0;
+ let contador = 0;
 
-function click() {
+function clickContador() {
     contador++;
     document.getElementById("contador").innerText = contador;
 }
-
-
-

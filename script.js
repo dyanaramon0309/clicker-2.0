@@ -10,26 +10,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const btnMejora1 = document.getElementById("btnMejora1");
     const btnMejora2 = document.getElementById("btnMejora2");
 
-    // Verificar elementos esenciales para que no rompa el código
     if (!boton || !textoContador) {
         console.error("Error: No se encontró el pan o el contador de texto.");
         return;
     }
 
-    // Funcionalidad básica del clicker
     boton.addEventListener("click", function () {
         contador += multiplicador;
         textoContador.textContent = contador;
     });
 
-    // Abrir y cerrar el menú lateral
     if (botonMenu && menuLateral) {
         botonMenu.addEventListener("click", function () {
             menuLateral.classList.toggle("active");
         });
     }
 
-    // Tienda: Mejora 1
     if (btnMejora1) {
         btnMejora1.addEventListener("click", function () {
             multiplicador = 2;
@@ -39,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Tienda: Mejora 2
     if (btnMejora2) {
         btnMejora2.addEventListener("click", function () {
             multiplicador = 3;
